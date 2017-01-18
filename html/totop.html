@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>topTop</title>
+    <style type="text/css">
+        body{
+            position:relative;
+            margin:0;
+            padding:0;
+        }
+        .toTop{
+            position:fixed;
+            bottom:50px;
+            right:30px;
+            color:red;
+            background:#ccc;
+            padding:5px;
+            cursor:pointer;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:1200px;background:blue">
+
+        window.onscroll = function(){
+      var t=document.documentElement.scrollTop||document.body.scrollTop;
+       
+      var toTop_div=document.querySelector(".toTop");
+      if(t>=100){
+        toTop_div.style.display="block"
+      }else{
+        toTop_div.style.display="none"
+      }
+   } 
+   <br>
+   $(".toTop").click(function(){
+      $("body").animate({"scrollTop":"0"},200)
+   })
+    </div>
+    <div class="toTop">
+        回到顶部
+    </div>
+</body>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script>
+
+   window.onscroll = function(){
+      var t=document.documentElement.scrollTop||document.body.scrollTop;
+       
+      var toTop_div=document.querySelector(".toTop");
+      if(t>=100){
+        toTop_div.style.display="block"
+      }else{
+        toTop_div.style.display="none"
+      }
+   } 
+   $(".toTop").click(function(){
+      $("body").animate({"scrollTop":"0"},200)
+   })
+</script>
+</html>
